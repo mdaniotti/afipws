@@ -1,8 +1,8 @@
 module Afipws
   class PersonaServiceA4
     WSDL = {
-      development: 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4?WSDL',
-      production: 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4?WSDL',
+      development: 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5?WSDL',
+      production: 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5?WSDL',
       test: Root + '/spec/fixtures/ws_sr_padron_a4.wsdl'
     }.freeze
 
