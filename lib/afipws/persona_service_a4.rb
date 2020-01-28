@@ -10,7 +10,7 @@ module Afipws
 
     def initialize options = {}
       @cuit = options[:cuit]
-      @wsaa = WSAA.new options.merge(service: 'ws_sr_padron_a4')
+      @wsaa = WSAA.new options.merge(service: 'ws_sr_padron_a5')
       @client = Client.new Hash(options[:savon]).reverse_merge(wsdl: WSDL[@wsaa.env], soap_version: 1)
     end
 
