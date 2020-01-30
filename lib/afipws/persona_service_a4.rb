@@ -1,16 +1,16 @@
 module Afipws
   class PersonaServiceA4
     WSDL = {
-      development: 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA5?WSDL',
-      production: 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA5?WSDL',
-      test: Root + '/spec/fixtures/ws_sr_padron_a5.wsdl'
+      development: 'https://awshomo.afip.gov.ar/sr-padron/webservices/personaServiceA4?WSDL',
+      production: 'https://aws.afip.gov.ar/sr-padron/webservices/personaServiceA4?WSDL',
+      test: Root + '/spec/fixtures/ws_sr_padron_a4.wsdl'
     }.freeze
 
     attr_reader :wsaa
 
     def initialize options = {}
       @cuit = options[:cuit]
-      @wsaa = WSAA.new options.merge(service: 'ws_sr_padron_a5')
+      @wsaa = WSAA.new options.merge(service: 'ws_sr_padron_a4')
       @client = Client.new Hash(options[:savon]).reverse_merge(wsdl: WSDL[@wsaa.env], soap_version: 1)
     end
 
